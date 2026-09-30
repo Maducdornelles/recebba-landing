@@ -628,10 +628,6 @@ export default function LandingPage() {
             variant="light"
             title={null}
           />
-
-          <span>
-            R→
-          </span>
         </div>
       </section>
 

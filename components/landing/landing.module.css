@@ -66,6 +66,8 @@
 
   gap: 9px;
 
+  color: var(--green-800);
+
   font-size: 20px;
 
   letter-spacing: -0.03em;
@@ -1500,23 +1502,27 @@
 ========================================================= */
 
 .finalCta {
-  position: relative;
-
-  width:
+  --cta-width:
     min(
       1380px,
       calc(100vw - 30px)
     );
 
+  position: relative;
+
+  width: var(--cta-width);
+
   min-height: 390px;
 
   margin: 0 auto 40px;
 
+  /* alinha o conteúdo ao container (--max) usando a largura do próprio card,
+     não a da viewport — senão o padding cresce sem limite em telas largas */
   padding:
     64px
     max(
       40px,
-      calc((100vw - var(--max)) / 2)
+      calc((var(--cta-width) - var(--max)) / 2)
     );
 
   display: grid;
@@ -1626,20 +1632,6 @@
     );
 }
 
-.finalBrandArt > span {
-  position: absolute;
-
-  right: 8%;
-  bottom: 14%;
-
-  font-size: 82px;
-
-  font-weight: 800;
-
-  color:
-    rgba(255,255,255,.055);
-}
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1670,7 +1662,7 @@
 }
 
 .footer .wordmarkInner {
-  color: var(--ink);
+  color: var(--green-800);
 
   font-size: 15px;
 }
